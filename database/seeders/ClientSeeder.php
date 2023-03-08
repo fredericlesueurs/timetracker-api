@@ -15,7 +15,14 @@ class ClientSeeder extends Seeder
     {
         Client::factory()
             ->count(20)
-            ->has(Project::factory()->count(2))
+            ->has(
+                Project::factory()
+                    ->count(1)
+                    ->has(
+                        Project::factory()->count(2),
+                        'children'
+                    )
+            )
             ->create();
     }
 }

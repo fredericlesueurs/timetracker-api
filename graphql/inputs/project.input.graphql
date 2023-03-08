@@ -1,0 +1,16 @@
+input CreateProjectInput @validator {
+    client_id: ID
+    name: String!
+    description: String
+    comments: String
+    main_project_id: ID
+}
+
+input UpdateProjectInput @validator {
+    id: ID!
+    client_id: ID
+    name: String!
+    description: String
+    comments: String
+    main_project_id: ID
+}

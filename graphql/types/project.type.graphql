@@ -4,4 +4,6 @@ type Project {
     description: String
     comments: String
     client: Client! @belongsTo
+    main: Project
+    children: [Project]!
 }

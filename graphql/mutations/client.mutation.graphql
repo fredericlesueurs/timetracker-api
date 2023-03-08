@@ -1,3 +1,5 @@
 extend type Mutation {
-    createClient(input: CreateClientInput! @spread): Client! @create
+    createClient(input: CreateClientInput! @spread): Client @create
+    updateClient(input: UpdateClientInput! @spread): Client @update
+    deleteClient(id: ID! @eq): Client @delete
 }

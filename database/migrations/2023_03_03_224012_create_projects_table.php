@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->softDeletes();
             $table->string('name');
             $table->text('description')->nullable();
             $table->text('comments')->nullable();
-            $table->foreignId('client_id')->constrained();
+            $table->foreignId('client_id')->nullable()->constrained();
+            $table->foreignId('main_project_id')->nullable()->constrained('projects');
         });
     }
 
