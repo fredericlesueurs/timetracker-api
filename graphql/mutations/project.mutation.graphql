@@ -1,5 +1,0 @@
-extend type Mutation {
-    createProject(input: CreateProjectInput! @spread): Project @create
-    updateProject(input: UpdateProjectInput! @spread): Project @update
-    deleteProject(id: ID! @eq): Project @delete
-}

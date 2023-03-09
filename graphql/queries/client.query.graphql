@@ -1,4 +1,0 @@
-extend type Query {
-    client(id: ID! @eq): Client @find
-    clients(name: String @where(operator: "like")): [Client]! @paginate(defaultCount: 10)
-}

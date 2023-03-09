@@ -1,9 +1,0 @@
-type Project {
-    id: ID!
-    name: String!
-    description: String
-    comments: String
-    client: Client @belongsTo
-    main: Project @belongsTo
-    children: [Project]! @hasMany
-}
